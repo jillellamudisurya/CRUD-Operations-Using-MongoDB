@@ -1,0 +1,31 @@
+html 
+    head
+    body
+        br
+        a(href="/add") Add Unicorn 
+        br
+        br
+        table(border=1)
+            thead
+                th Name 
+                th DOB 
+                th Loves 
+                th Weight 
+                th gender 
+                th vampires 
+                th(colspan=2) operatios
+            tbody 
+                each val,i in unicorns 
+                    tr 
+                        td=val.name 
+                        td=val.dob 
+                        td=val.loves 
+                        td=val.weight 
+                        td=val.gender 
+                        td=val.vampires
+                        td
+                            a(href="/edit/"+i)
+                                button Edit
+                        td 
+                            a(href="/delete/"+i)
+                                button Delete
